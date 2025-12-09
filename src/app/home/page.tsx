@@ -135,10 +135,14 @@ export default function HomePage() {
             const now = new Date();
             const diff = ANNIVERSARY_DATE.getTime() - now.getTime();
 
-            // If countdown is complete, show popup
+            // If countdown is complete, show popup (only if not previously dismissed)
             if (diff <= 0) {
                 setIsAnniversary(true);
-                setShowPopup(true);
+                // Check if popup was previously dismissed
+                const wasDismissed = localStorage.getItem('anniversaryPopupDismissed') === 'true';
+                if (!wasDismissed) {
+                    setShowPopup(true);
+                }
                 setCountdown([
                     { value: 0, label: 'Days' },
                     { value: 0, label: 'Hours' },

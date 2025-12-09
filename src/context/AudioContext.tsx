@@ -39,6 +39,14 @@ export function AudioProvider({ children }: AudioProviderProps) {
     const [isMuted, setIsMuted] = useState(false);
     const [hasStarted, setHasStarted] = useState(false);
 
+    // On mount, check localStorage for persisted hasStarted state
+    useEffect(() => {
+        const stored = localStorage.getItem('anniversaryHasStarted');
+        if (stored === 'true') {
+            setHasStarted(true);
+        }
+    }, []);
+
     useEffect(() => {
         // Create audio element
         const audio = new Audio('/audio/love-me-like-you-do.mp3'); // CUSTOMIZE: Change audio file path
@@ -64,6 +72,8 @@ export function AudioProvider({ children }: AudioProviderProps) {
         // Always set hasStarted to true to allow navigation and show UI
         // even if audio file is missing
         setHasStarted(true);
+        // Persist to localStorage so navbar stays visible after refresh
+        localStorage.setItem('anniversaryHasStarted', 'true');
 
         if (audioRef.current && !isPlaying) {
             audioRef.current.play().then(() => {

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Heart, Sparkles, Star } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 /**
  * Anniversary Popup Component
@@ -71,8 +72,14 @@ interface AnniversaryPopupProps {
 }
 
 export default function AnniversaryPopup({ isOpen, onClose }: AnniversaryPopupProps) {
+    const router = useRouter();
     const [showContent, setShowContent] = useState(false);
     const [fireBurstComplete, setFireBurstComplete] = useState(false);
+
+    const handleEnterSite = () => {
+        onClose();
+        router.push('/journey');
+    };
 
     useEffect(() => {
         if (isOpen) {
@@ -84,6 +91,13 @@ export default function AnniversaryPopup({ isOpen, onClose }: AnniversaryPopupPr
         }
     }, [isOpen]);
 
+    // Dismiss popup permanently (save to localStorage)
+    const handleDismiss = () => {
+        localStorage.setItem('anniversaryPopupDismissed', 'true');
+        localStorage.setItem('anniversaryHasStarted', 'true');
+        onClose();
+    };
+
     return (
         <AnimatePresence>
             {isOpen && (
@@ -94,6 +108,25 @@ export default function AnniversaryPopup({ isOpen, onClose }: AnniversaryPopupPr
                     className="fixed inset-0 z-[100] flex items-center justify-center overflow-hidden"
                     style={{ background: 'rgba(0, 0, 0, 0.95)' }}
                 >
+                    {/* Close Button (X) */}
+                    <motion.button
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 2 }}
+                        onClick={handleDismiss}
+                        className="absolute top-6 right-6 z-[110] p-3 rounded-full"
+                        style={{
+                            background: 'rgba(255, 107, 107, 0.2)',
+                            border: '1px solid rgba(255, 107, 107, 0.4)',
+                        }}
+                        whileHover={{ scale: 1.1, background: 'rgba(255, 107, 107, 0.4)' }}
+                        whileTap={{ scale: 0.9 }}
+                        aria-label="Close popup"
+                    >
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff6b6b" strokeWidth="2">
+                            <path d="M18 6L6 18M6 6l12 12" />
+                        </svg>
+                    </motion.button>
                     {/* Fire Burst Animation */}
                     {!fireBurstComplete && (
                         <div className="absolute inset-0 flex items-center justify-center">
@@ -283,7 +316,7 @@ export default function AnniversaryPopup({ isOpen, onClose }: AnniversaryPopupPr
                                             className="text-center"
                                         >
                                             <motion.button
-                                                onClick={onClose}
+                                                onClick={handleEnterSite}
                                                 className="px-8 py-4 rounded-full text-white font-display text-lg"
                                                 style={{
                                                     background: 'linear-gradient(135deg, #ff6b6b, #ff8c69)',
