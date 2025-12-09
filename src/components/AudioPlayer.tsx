@@ -49,8 +49,8 @@ export default function AudioPlayer() {
                             }}
                             style={{
                                 minHeight: 4,
-                                background: i % 2 === 0 ? '#ff2d92' : '#00f5ff',
-                                boxShadow: `0 0 8px ${i % 2 === 0 ? '#ff2d92' : '#00f5ff'}`
+                                background: i % 2 === 0 ? '#ff6b6b' : '#ffb347',
+                                boxShadow: `0 0 8px ${i % 2 === 0 ? '#ff6b6b' : '#ffb347'}`
                             }}
                         />
                     ))}
@@ -76,7 +76,7 @@ export default function AudioPlayer() {
                             >
                                 <Pause
                                     className="w-4 h-4"
-                                    style={{ color: '#ff2d92', filter: 'drop-shadow(0 0 4px #ff2d92)' }}
+                                    style={{ color: '#ff6b6b', filter: 'drop-shadow(0 0 4px #ff6b6b)' }}
                                 />
                             </motion.div>
                         ) : (
@@ -88,7 +88,7 @@ export default function AudioPlayer() {
                             >
                                 <Play
                                     className="w-4 h-4"
-                                    style={{ color: '#ff2d92', filter: 'drop-shadow(0 0 4px #ff2d92)' }}
+                                    style={{ color: '#ff6b6b', filter: 'drop-shadow(0 0 4px #ff6b6b)' }}
                                 />
                             </motion.div>
                         )}
@@ -124,7 +124,7 @@ export default function AudioPlayer() {
                             >
                                 <Volume2
                                     className="w-4 h-4"
-                                    style={{ color: '#00f5ff', filter: 'drop-shadow(0 0 4px #00f5ff)' }}
+                                    style={{ color: '#ffb347', filter: 'drop-shadow(0 0 4px #ffb347)' }}
                                 />
                             </motion.div>
                         )}

@@ -49,7 +49,7 @@ const anniversaryMessage = {
 const fireParticleConfigs = Array.from({ length: 40 }, (_, i) => ({
     angle: (i * 360 / 40) * Math.PI / 180,
     distance: 200 + (i * 5),
-    color: i % 3 === 0 ? '#ff2d92' : i % 3 === 1 ? '#ffd700' : '#ff6b9d',
+    color: i % 3 === 0 ? '#ff6b6b' : i % 3 === 1 ? '#ffd700' : '#ffa07a',
 }));
 
 // Deterministic heart configs
@@ -104,7 +104,7 @@ export default function AnniversaryPopup({ isOpen, onClose }: AnniversaryPopupPr
                                 transition={{ duration: 1.5, ease: "easeOut" }}
                                 className="absolute w-32 h-32 rounded-full"
                                 style={{
-                                    background: 'radial-gradient(circle, #ff2d92, #ff6b9d, transparent)',
+                                    background: 'radial-gradient(circle, #ff6b6b, #ffa07a, transparent)',
                                 }}
                             />
 
@@ -201,7 +201,7 @@ export default function AnniversaryPopup({ isOpen, onClose }: AnniversaryPopupPr
                                             <Heart
                                                 className="w-16 h-16 mx-auto text-neon-pink"
                                                 fill="currentColor"
-                                                style={{ filter: 'drop-shadow(0 0 20px #ff2d92)' }}
+                                                style={{ filter: 'drop-shadow(0 0 20px #ff6b6b)' }}
                                             />
                                         </motion.div>
 
@@ -269,7 +269,7 @@ export default function AnniversaryPopup({ isOpen, onClose }: AnniversaryPopupPr
                                             </div>
                                             <p
                                                 className="font-display text-lg whitespace-pre-line text-center"
-                                                style={{ color: '#ff6b9d', textShadow: '0 0 10px #ff6b9d' }}
+                                                style={{ color: '#ffa07a', textShadow: '0 0 10px #ffa07a' }}
                                             >
                                                 {anniversaryMessage.signature}
                                             </p>
@@ -286,7 +286,7 @@ export default function AnniversaryPopup({ isOpen, onClose }: AnniversaryPopupPr
                                                 onClick={onClose}
                                                 className="px-8 py-4 rounded-full text-white font-display text-lg"
                                                 style={{
-                                                    background: 'linear-gradient(135deg, #ff2d92, #bf5af2)',
+                                                    background: 'linear-gradient(135deg, #ff6b6b, #ff8c69)',
                                                     boxShadow: '0 0 30px rgba(255, 45, 146, 0.5)'
                                                 }}
                                                 whileHover={{ scale: 1.05, boxShadow: '0 0 50px rgba(255, 45, 146, 0.7)' }}

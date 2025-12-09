@@ -23,7 +23,7 @@ const iconMap: { [key: string]: React.ComponentType<{ className?: string; style?
 };
 
 // Neon colors for timeline dots
-const neonColors = ['#ff2d92', '#00f5ff', '#bf5af2', '#ffd700', '#ff6b9d'];
+const neonColors = ['#ff6b6b', '#ffb347', '#ff8c69', '#ffd700', '#ffa07a'];
 
 interface TimelineItemProps {
     event: typeof timelineData[0];
@@ -210,8 +210,8 @@ export default function JourneyPage() {
                         <div
                             className="w-full h-full"
                             style={{
-                                background: 'linear-gradient(180deg, transparent 0%, #ff2d92 10%, #00f5ff 50%, #bf5af2 90%, transparent 100%)',
-                                boxShadow: '0 0 10px #ff2d92'
+                                background: 'linear-gradient(180deg, transparent 0%, #ff6b6b 10%, #ffb347 50%, #ff8c69 90%, transparent 100%)',
+                                boxShadow: '0 0 10px #ff6b6b'
                             }}
                         />
                     </motion.div>
@@ -220,8 +220,8 @@ export default function JourneyPage() {
                     <div
                         className="absolute left-6 top-0 bottom-0 w-px md:hidden"
                         style={{
-                            background: 'linear-gradient(180deg, transparent, #ff2d92, #00f5ff, transparent)',
-                            boxShadow: '0 0 10px #ff2d92'
+                            background: 'linear-gradient(180deg, transparent, #ff6b6b, #ffb347, transparent)',
+                            boxShadow: '0 0 10px #ff6b6b'
                         }}
                     />
 
@@ -262,15 +262,15 @@ export default function JourneyPage() {
                             animate={{ scale: [1, 1.15, 1] }}
                             transition={{ duration: 1.2, repeat: Infinity }}
                             style={{
-                                boxShadow: '0 0 30px #ff2d92'
+                                boxShadow: '0 0 30px #ff6b6b'
                             }}
                         >
                             <Heart
                                 className="w-8 h-8"
                                 fill="currentColor"
                                 style={{
-                                    color: '#ff2d92',
-                                    filter: 'drop-shadow(0 0 10px #ff2d92)'
+                                    color: '#ff6b6b',
+                                    filter: 'drop-shadow(0 0 10px #ff6b6b)'
                                 }}
                             />
                         </motion.div>

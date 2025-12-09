@@ -93,8 +93,8 @@ export default function GalleryPage() {
                                     size={16 + i * 2}
                                     fill="currentColor"
                                     style={{
-                                        color: i % 2 === 0 ? '#ff2d92' : '#00f5ff',
-                                        filter: `drop-shadow(0 0 8px ${i % 2 === 0 ? '#ff2d92' : '#00f5ff'})`
+                                        color: i % 2 === 0 ? '#ff6b6b' : '#ffb347',
+                                        filter: `drop-shadow(0 0 8px ${i % 2 === 0 ? '#ff6b6b' : '#ffb347'})`
                                     }}
                                 />
                             </motion.div>
@@ -130,7 +130,7 @@ export default function GalleryPage() {
                                 Every picture tells a story of us. Click on any photo to view it closer.
                             </p>
                             <div className="flex items-center justify-center gap-2 text-cream/40 text-sm">
-                                <Shield className="w-4 h-4" style={{ color: '#00f5ff' }} />
+                                <Shield className="w-4 h-4" style={{ color: '#ffb347' }} />
                                 <span>Protected Gallery</span>
                             </div>
                         </motion.div>
@@ -180,7 +180,7 @@ export default function GalleryPage() {
                                         <div
                                             className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                                             style={{
-                                                boxShadow: 'inset 0 0 0 2px #ff2d92, 0 0 20px #ff2d92'
+                                                boxShadow: 'inset 0 0 0 2px #ff6b6b, 0 0 20px #ff6b6b'
                                             }}
                                         />
 
@@ -204,8 +204,8 @@ export default function GalleryPage() {
                                                 className="w-5 h-5"
                                                 fill="currentColor"
                                                 style={{
-                                                    color: '#ff2d92',
-                                                    filter: 'drop-shadow(0 0 8px #ff2d92)'
+                                                    color: '#ff6b6b',
+                                                    filter: 'drop-shadow(0 0 8px #ff6b6b)'
                                                 }}
                                             />
                                         </motion.div>
@@ -268,7 +268,7 @@ export default function GalleryPage() {
                                         border: '1px solid rgba(255, 45, 146, 0.4)'
                                     }}
                                 >
-                                    <X className="w-6 h-6" style={{ color: '#ff2d92' }} />
+                                    <X className="w-6 h-6" style={{ color: '#ff6b6b' }} />
                                 </motion.button>
 
                                 {/* Navigation arrows */}
@@ -283,7 +283,7 @@ export default function GalleryPage() {
                                         border: '1px solid rgba(0, 245, 255, 0.3)'
                                     }}
                                 >
-                                    <ChevronLeft className="w-8 h-8" style={{ color: '#00f5ff' }} />
+                                    <ChevronLeft className="w-8 h-8" style={{ color: '#ffb347' }} />
                                 </motion.button>
 
                                 <motion.button
@@ -297,7 +297,7 @@ export default function GalleryPage() {
                                         border: '1px solid rgba(0, 245, 255, 0.3)'
                                     }}
                                 >
-                                    <ChevronRight className="w-8 h-8" style={{ color: '#00f5ff' }} />
+                                    <ChevronRight className="w-8 h-8" style={{ color: '#ffb347' }} />
                                 </motion.button>
 
                                 {/* Main image */}

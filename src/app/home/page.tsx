@@ -101,10 +101,10 @@ function SparkleParticles() {
                         top: `${particle.top}%`,
                         width: particle.size,
                         height: particle.size,
-                        background: i % 2 === 0 ? '#ff2d92' : '#00f5ff',
+                        background: i % 2 === 0 ? '#ff6b6b' : '#ffb347',
                         boxShadow: i % 2 === 0
-                            ? '0 0 10px #ff2d92, 0 0 20px #ff2d92'
-                            : '0 0 10px #00f5ff, 0 0 20px #00f5ff',
+                            ? '0 0 10px #ff6b6b, 0 0 20px #ff6b6b'
+                            : '0 0 10px #ffb347, 0 0 20px #ffb347',
                     }}
                     animate={{
                         opacity: [0, 1, 0],
@@ -236,7 +236,7 @@ export default function HomePage() {
                         <Heart
                             className="w-8 h-8 mx-auto text-neon-pink"
                             fill="currentColor"
-                            style={{ filter: 'drop-shadow(0 0 10px #ff2d92)' }}
+                            style={{ filter: 'drop-shadow(0 0 10px #ff6b6b)' }}
                         />
                     </motion.div>
 
@@ -260,8 +260,8 @@ export default function HomePage() {
                         <motion.div
                             className="w-32 h-px mx-auto"
                             style={{
-                                background: 'linear-gradient(90deg, transparent, #ff2d92, transparent)',
-                                boxShadow: '0 0 20px #ff2d92'
+                                background: 'linear-gradient(90deg, transparent, #ff6b6b, transparent)',
+                                boxShadow: '0 0 20px #ff6b6b'
                             }}
                         />
                     </motion.div>

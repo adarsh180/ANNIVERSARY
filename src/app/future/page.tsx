@@ -18,31 +18,31 @@ const careerDreams = [
         description: 'NEET UG crack karke best doctor banna... I know aap kar logi. Aur main hamesha aapke saath rahunga, har step pe support karunga.',
         icon: Stethoscope,
         timeline: 'Your journey starts now',
-        neonColor: '#ff2d92'
+        neonColor: '#ff6b6b'
     },
     {
         title: 'Mera Dream - IAS Officer 🎯',
         description: 'UPSC CSE crack karke IAS officer banna hai. Aur main promise karta hoon ki success ke baad bhi meri priority aap hi rahogi.',
         icon: GraduationCap,
         timeline: 'Together we\'ll achieve',
-        neonColor: '#00f5ff'
+        neonColor: '#ffb347'
     },
     {
         title: 'Hamesha Saath 💕',
         description: 'I will never choose anyone over you. In every life, in every form, I will choose you. Bas aap hi, forever.',
         icon: Heart,
         timeline: 'Every lifetime',
-        neonColor: '#bf5af2'
+        neonColor: '#ff8c69'
     },
 ];
 
 // Little Moments
 const littleMoments = [
-    { icon: IceCream, moment: 'Ice-cream dates 🍦', description: 'Bas aapke saath thandi ice-cream aur garam baatein', neonColor: '#ff6b9d' },
-    { icon: Moon, moment: 'Balcony talks under the moon 🌙', description: 'Late night, balcony mein baith k, chaand dekh k baatein karna', neonColor: '#00f5ff' },
+    { icon: IceCream, moment: 'Ice-cream dates 🍦', description: 'Bas aapke saath thandi ice-cream aur garam baatein', neonColor: '#ffa07a' },
+    { icon: Moon, moment: 'Balcony talks under the moon 🌙', description: 'Late night, balcony mein baith k, chaand dekh k baatein karna', neonColor: '#ffb347' },
     { icon: Coffee, moment: 'Ek saath khana khana 🍽️', description: 'Saath mein table pe baith k, har meal ek celebration bana denge', neonColor: '#ffd700' },
-    { icon: MessageCircle, moment: 'Har moment saath create karna ✨', description: 'Choti choti khushiyan, saath mein jeena har pal', neonColor: '#bf5af2' },
-    { icon: Home, moment: 'Apna home, apni duniya 🏡', description: 'Jahan sirf hum ho, pyaar ho, aur sukoon ho', neonColor: '#ff2d92' },
+    { icon: MessageCircle, moment: 'Har moment saath create karna ✨', description: 'Choti choti khushiyan, saath mein jeena har pal', neonColor: '#ff8c69' },
+    { icon: Home, moment: 'Apna home, apni duniya 🏡', description: 'Jahan sirf hum ho, pyaar ho, aur sukoon ho', neonColor: '#ff6b6b' },
 ];
 
 // Honeymoon Dream
@@ -90,8 +90,8 @@ export default function FuturePage() {
                                 className="w-4 h-4"
                                 fill="currentColor"
                                 style={{
-                                    color: i % 3 === 0 ? '#ff2d92' : i % 3 === 1 ? '#00f5ff' : '#bf5af2',
-                                    filter: `drop-shadow(0 0 8px ${i % 3 === 0 ? '#ff2d92' : i % 3 === 1 ? '#00f5ff' : '#bf5af2'})`
+                                    color: i % 3 === 0 ? '#ff6b6b' : i % 3 === 1 ? '#ffb347' : '#ff8c69',
+                                    filter: `drop-shadow(0 0 8px ${i % 3 === 0 ? '#ff6b6b' : i % 3 === 1 ? '#ffb347' : '#ff8c69'})`
                                 }}
                             />
                         </motion.div>
@@ -113,8 +113,8 @@ export default function FuturePage() {
                                 className="w-12 h-12 mx-auto mb-4"
                                 fill="currentColor"
                                 style={{
-                                    color: '#ff2d92',
-                                    filter: 'drop-shadow(0 0 20px #ff2d92) drop-shadow(0 0 40px #ff2d92)'
+                                    color: '#ff6b6b',
+                                    filter: 'drop-shadow(0 0 20px #ff6b6b) drop-shadow(0 0 40px #ff6b6b)'
                                 }}
                             />
                         </motion.div>
@@ -298,8 +298,8 @@ export default function FuturePage() {
                                     className="w-10 h-10 mx-auto mb-6"
                                     fill="currentColor"
                                     style={{
-                                        color: '#ff2d92',
-                                        filter: 'drop-shadow(0 0 15px #ff2d92)'
+                                        color: '#ff6b6b',
+                                        filter: 'drop-shadow(0 0 15px #ff6b6b)'
                                     }}
                                 />
                             </motion.div>
@@ -308,7 +308,7 @@ export default function FuturePage() {
                                 {foreverPromise.hindi}
                             </p>
 
-                            <p className="font-display text-lg italic" style={{ color: '#ff6b9d' }}>
+                            <p className="font-display text-lg italic" style={{ color: '#ffa07a' }}>
                                 &quot;{foreverPromise.english}&quot;
                             </p>
 

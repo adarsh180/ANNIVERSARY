@@ -56,7 +56,7 @@ export default function Navigation() {
                                         href={item.href}
                                         className="relative flex items-center gap-2 px-3 py-2 rounded-full transition-all duration-300"
                                         style={{
-                                            color: isActive ? '#ff2d92' : 'rgba(245, 240, 232, 0.7)',
+                                            color: isActive ? '#ff6b6b' : 'rgba(245, 240, 232, 0.7)',
                                             background: isActive ? 'rgba(255, 45, 146, 0.15)' : 'transparent',
                                             boxShadow: isActive ? '0 0 20px rgba(255, 45, 146, 0.3)' : 'none',
                                         }}
@@ -68,7 +68,7 @@ export default function Navigation() {
                                             <Icon
                                                 className="w-4 h-4"
                                                 style={{
-                                                    filter: isActive ? 'drop-shadow(0 0 6px #ff2d92)' : 'none'
+                                                    filter: isActive ? 'drop-shadow(0 0 6px #ff6b6b)' : 'none'
                                                 }}
                                             />
                                         </motion.div>
@@ -83,8 +83,8 @@ export default function Navigation() {
                                                 className="absolute -bottom-1 left-1/2 w-1/2 h-0.5"
                                                 style={{
                                                     transform: 'translateX(-50%)',
-                                                    background: 'linear-gradient(90deg, #ff2d92, #00f5ff)',
-                                                    boxShadow: '0 0 10px #ff2d92'
+                                                    background: 'linear-gradient(90deg, #ff6b6b, #ffb347)',
+                                                    boxShadow: '0 0 10px #ff6b6b'
                                                 }}
                                             />
                                         )}

@@ -116,8 +116,8 @@ export default function LetterPage() {
                                 className="w-4 h-4"
                                 fill="currentColor"
                                 style={{
-                                    color: i % 2 === 0 ? '#ff2d92' : '#ff6b9d',
-                                    filter: `drop-shadow(0 0 6px ${i % 2 === 0 ? '#ff2d92' : '#ff6b9d'})`
+                                    color: i % 2 === 0 ? '#ff6b6b' : '#ffa07a',
+                                    filter: `drop-shadow(0 0 6px ${i % 2 === 0 ? '#ff6b6b' : '#ffa07a'})`
                                 }}
                             />
                         </motion.div>
@@ -216,7 +216,7 @@ export default function LetterPage() {
                             style={{
                                 background: currentPage === 0 ? 'rgba(30, 30, 30, 0.5)' : 'rgba(255, 45, 146, 0.1)',
                                 border: currentPage === 0 ? '1px solid rgba(255, 255, 255, 0.1)' : '1px solid rgba(255, 45, 146, 0.3)',
-                                color: currentPage === 0 ? 'rgba(245, 240, 232, 0.3)' : '#ff2d92',
+                                color: currentPage === 0 ? 'rgba(245, 240, 232, 0.3)' : '#ff6b6b',
                                 cursor: currentPage === 0 ? 'not-allowed' : 'pointer',
                                 boxShadow: currentPage === 0 ? 'none' : '0 0 20px rgba(255, 45, 146, 0.2)'
                             }}
@@ -242,9 +242,9 @@ export default function LetterPage() {
                                         style={{
                                             width: isActive ? 24 : 8,
                                             background: isActive
-                                                ? 'linear-gradient(90deg, #ff2d92, #00f5ff)'
+                                                ? 'linear-gradient(90deg, #ff6b6b, #ffb347)'
                                                 : 'rgba(245, 240, 232, 0.3)',
-                                            boxShadow: isActive ? '0 0 10px #ff2d92' : 'none'
+                                            boxShadow: isActive ? '0 0 10px #ff6b6b' : 'none'
                                         }}
                                         layout
                                     />
@@ -260,7 +260,7 @@ export default function LetterPage() {
                             style={{
                                 background: currentPage === totalPages - 1 ? 'rgba(30, 30, 30, 0.5)' : 'rgba(255, 45, 146, 0.1)',
                                 border: currentPage === totalPages - 1 ? '1px solid rgba(255, 255, 255, 0.1)' : '1px solid rgba(255, 45, 146, 0.3)',
-                                color: currentPage === totalPages - 1 ? 'rgba(245, 240, 232, 0.3)' : '#ff2d92',
+                                color: currentPage === totalPages - 1 ? 'rgba(245, 240, 232, 0.3)' : '#ff6b6b',
                                 cursor: currentPage === totalPages - 1 ? 'not-allowed' : 'pointer',
                                 boxShadow: currentPage === totalPages - 1 ? 'none' : '0 0 20px rgba(255, 45, 146, 0.2)'
                             }}

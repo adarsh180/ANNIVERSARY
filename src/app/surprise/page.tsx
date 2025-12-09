@@ -39,7 +39,7 @@ function Confetti() {
     return (
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
             {[...Array(60)].map((_, i) => {
-                const colors = ['#ff2d92', '#00f5ff', '#ffd700', '#bf5af2', '#ff6b9d'];
+                const colors = ['#ff6b6b', '#ffb347', '#ffd700', '#ff8c69', '#ffa07a'];
                 const color = colors[i % colors.length];
                 const startX = 10 + (i * 1.5);
                 const endX = startX + (i % 10 - 5) * 4;
@@ -84,7 +84,7 @@ function FireParticles() {
             {[...Array(50)].map((_, i) => {
                 const angle = (i * 360 / 50) * (Math.PI / 180);
                 const dist = 150 + Math.random() * 200;
-                const colors = ['#ff2d92', '#ffd700', '#ff6b9d', '#bf5af2'];
+                const colors = ['#ff6b6b', '#ffd700', '#ffa07a', '#ff8c69'];
 
                 return (
                     <motion.div
@@ -164,8 +164,8 @@ export default function SurprisePage() {
                                 className="w-4 h-4"
                                 fill="currentColor"
                                 style={{
-                                    color: i % 2 === 0 ? '#ff2d92' : '#00f5ff',
-                                    filter: `drop-shadow(0 0 8px ${i % 2 === 0 ? '#ff2d92' : '#00f5ff'})`
+                                    color: i % 2 === 0 ? '#ff6b6b' : '#ffb347',
+                                    filter: `drop-shadow(0 0 8px ${i % 2 === 0 ? '#ff6b6b' : '#ffb347'})`
                                 }}
                             />
                         </motion.div>
@@ -212,22 +212,22 @@ export default function SurprisePage() {
                                         className="w-32 h-32 md:w-40 md:h-40 rounded-2xl flex items-center justify-center mx-auto"
                                         animate={{
                                             boxShadow: [
-                                                '0 0 30px #ff2d92, 0 0 60px rgba(255, 45, 146, 0.5)',
-                                                '0 0 50px #ff2d92, 0 0 100px rgba(255, 45, 146, 0.7)',
-                                                '0 0 30px #ff2d92, 0 0 60px rgba(255, 45, 146, 0.5)',
+                                                '0 0 30px #ff6b6b, 0 0 60px rgba(255, 45, 146, 0.5)',
+                                                '0 0 50px #ff6b6b, 0 0 100px rgba(255, 45, 146, 0.7)',
+                                                '0 0 30px #ff6b6b, 0 0 60px rgba(255, 45, 146, 0.5)',
                                             ]
                                         }}
                                         transition={{ duration: 2, repeat: Infinity }}
                                         style={{
                                             background: 'linear-gradient(135deg, rgba(255, 45, 146, 0.2), rgba(191, 90, 242, 0.2))',
-                                            border: '2px solid #ff2d92',
+                                            border: '2px solid #ff6b6b',
                                         }}
                                     >
                                         <Gift
                                             className="w-16 h-16 md:w-20 md:h-20"
                                             style={{
-                                                color: '#ff2d92',
-                                                filter: 'drop-shadow(0 0 20px #ff2d92)'
+                                                color: '#ff6b6b',
+                                                filter: 'drop-shadow(0 0 20px #ff6b6b)'
                                             }}
                                         />
                                     </motion.div>
@@ -312,8 +312,8 @@ export default function SurprisePage() {
                                                 className="w-12 h-12 mx-auto"
                                                 fill="currentColor"
                                                 style={{
-                                                    color: '#ff2d92',
-                                                    filter: 'drop-shadow(0 0 20px #ff2d92)'
+                                                    color: '#ff6b6b',
+                                                    filter: 'drop-shadow(0 0 20px #ff6b6b)'
                                                 }}
                                             />
                                         </motion.div>

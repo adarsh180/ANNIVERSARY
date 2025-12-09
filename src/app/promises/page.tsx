@@ -26,28 +26,28 @@ const promises: Promise[] = [
         title: 'Ghar Ki and aapki Zimmedari',
         description: 'Main promise karta hoon ki hamare ghar aur humari wellbeing ki poori zimmedari meri hogi. Jaise main ghar chalane ke liye mehnat karunga, waise hi main is baat ka poora khayal rakhunga ki aapki soul ko kabhi pyaar aur attention ki kami mehsoos na ho.',
         icon: Home,
-        neonColor: '#ff2d92'
+        neonColor: '#ff6b6b'
     },
     {
         number: 2,
         title: 'Your Supporter',
         description: 'Main vaada karta hoon ki main hamesha aapki aur hamari family ki dhaal (shield) bankar rahunga. Jab aap kamzor mehsoos karengi, main aapki taaqat banoonga. Main aapki physical aur mental health ka utna hi sakhti se khayal rakhunga jitna main apna rakhta hoon.',
         icon: Shield,
-        neonColor: '#00f5ff'
+        neonColor: '#ffb347'
     },
     {
         number: 3,
         title: 'Saath Mein we will see everything',
         description: 'Main promise karta hoon ki hum saath milkar apni life mein aage badhenge—sirf paison mein nahi, balki values aur khushiyon mein bhi. Humara future hum saath banayenge, aur meri har jeet aur success par sirf mera nahi, "humara" haq hoga.',
         icon: TrendingUp,
-        neonColor: '#bf5af2'
+        neonColor: '#ff8c69'
     },
     {
         number: 4,
         title: 'Aapki Khushi Meri Priority',
         description: 'Main vaada karta hoon ki meri priority hamesha aapki khushi hogi. Hamare ghar mein aapki awaaz aur aapki rai (opinion) hamesha mayne rakhegi. Rishte mein shanti tabhi hoti hai jab izzat ho, aur main hamesha aapki respect karunga.',
         icon: Heart,
-        neonColor: '#ff6b9d'
+        neonColor: '#ffa07a'
     },
     {
         number: 5,
@@ -61,28 +61,28 @@ const promises: Promise[] = [
         title: 'Har Mausam Mein Saath',
         description: 'Main vaada karta hoon ki life ke har mausam mein—chahe gussa ho ya dukh—main aapka haath kabhi nahi chhodunga. Chahe waqt accha ho ya bura, hum ameer hon ya struggle kar rahe hon, aap kabhi bhi kisi toofan ka saamna akele nahi karogi.',
         icon: InfinityIcon,
-        neonColor: '#00f5ff'
+        neonColor: '#ffb347'
     },
     {
         number: 7,
         title: 'To be better fit for u',
         description: 'Pati banne se pehle, main aapse vaada karta hoon ki main aapka sabse saccha dost banunga. Hamare rishte mein koi bada ya chhota nahi hoga, hum hamesha barabari se, kandhe se kandha milakar chalenge.',
         icon: MessageCircle,
-        neonColor: '#ff2d92'
+        neonColor: '#ff6b6b'
     },
     {
         number: 8,
         title: 'Way we solve our fight',
         description: 'Main promise karta hoon ki hamare beech ke jhagde aur arguments sirf hamare beech rahenge. Chahe kitni bhi badi baat ho jaye, main kisi teesre insan ko kabhi hamare beech nahi launga. Hum apni problems khud solve karenge.',
         icon: Lock,
-        neonColor: '#bf5af2'
+        neonColor: '#ff8c69'
     },
     {
         number: 9,
         title: 'Passion Never Dies',
         description: 'Main vaada karta hoon ki waqt ya umr ke saath hamare beech ka passion kam nahi hone dunga. Humare beech ka physical affection, romance hamesha meri priority rahegi. Hum hamesha lovers rahenge.',
         icon: Flame,
-        neonColor: '#ff6b9d'
+        neonColor: '#ffa07a'
     },
     {
         number: 10,
@@ -128,8 +128,8 @@ export default function PromisesPage() {
                                 className="w-4 h-4"
                                 fill="currentColor"
                                 style={{
-                                    color: i % 2 === 0 ? '#ff2d92' : '#00f5ff',
-                                    filter: `drop-shadow(0 0 10px ${i % 2 === 0 ? '#ff2d92' : '#00f5ff'})`
+                                    color: i % 2 === 0 ? '#ff6b6b' : '#ffb347',
+                                    filter: `drop-shadow(0 0 10px ${i % 2 === 0 ? '#ff6b6b' : '#ffb347'})`
                                 }}
                             />
                         </motion.div>
@@ -151,8 +151,8 @@ export default function PromisesPage() {
                                 className="w-12 h-12 mx-auto mb-4"
                                 fill="currentColor"
                                 style={{
-                                    color: '#ff2d92',
-                                    filter: 'drop-shadow(0 0 20px #ff2d92) drop-shadow(0 0 40px #ff2d92)'
+                                    color: '#ff6b6b',
+                                    filter: 'drop-shadow(0 0 20px #ff6b6b) drop-shadow(0 0 40px #ff6b6b)'
                                 }}
                             />
                         </motion.div>
@@ -272,8 +272,8 @@ export default function PromisesPage() {
                                 className="w-10 h-10 mx-auto mb-4"
                                 fill="currentColor"
                                 style={{
-                                    color: '#ff2d92',
-                                    filter: 'drop-shadow(0 0 15px #ff2d92)'
+                                    color: '#ff6b6b',
+                                    filter: 'drop-shadow(0 0 15px #ff6b6b)'
                                 }}
                             />
                         </motion.div>
@@ -298,7 +298,7 @@ export default function PromisesPage() {
                         onClick={() => setShowGateway(true)}
                         className="group relative px-8 py-4 rounded-full font-display text-lg overflow-hidden"
                         style={{
-                            background: 'linear-gradient(135deg, #ff2d92, #bf5af2)',
+                            background: 'linear-gradient(135deg, #ff6b6b, #ff8c69)',
                             boxShadow: '0 0 30px rgba(255, 45, 146, 0.5)'
                         }}
                         whileHover={{ scale: 1.05, boxShadow: '0 0 50px rgba(255, 45, 146, 0.7)' }}
@@ -354,8 +354,8 @@ export default function PromisesPage() {
                                             className="w-6 h-6"
                                             fill="currentColor"
                                             style={{
-                                                color: '#ff2d92',
-                                                filter: 'drop-shadow(0 0 10px #ff2d92)'
+                                                color: '#ff6b6b',
+                                                filter: 'drop-shadow(0 0 10px #ff6b6b)'
                                             }}
                                         />
                                     </motion.div>
@@ -381,8 +381,8 @@ export default function PromisesPage() {
                                             className="w-16 h-16 mx-auto"
                                             fill="currentColor"
                                             style={{
-                                                color: '#ff2d92',
-                                                filter: 'drop-shadow(0 0 20px #ff2d92)'
+                                                color: '#ff6b6b',
+                                                filter: 'drop-shadow(0 0 20px #ff6b6b)'
                                             }}
                                         />
                                     </motion.div>
@@ -410,7 +410,7 @@ export default function PromisesPage() {
                                             onClick={() => router.push('/surprise')}
                                             className="px-8 py-3 rounded-full text-white font-display"
                                             style={{
-                                                background: 'linear-gradient(135deg, #ff2d92, #bf5af2)',
+                                                background: 'linear-gradient(135deg, #ff6b6b, #ff8c69)',
                                                 boxShadow: '0 0 20px rgba(255, 45, 146, 0.5)'
                                             }}
                                             whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(255, 45, 146, 0.7)' }}

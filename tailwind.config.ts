@@ -33,14 +33,14 @@ export default {
         },
         cream: '#f5f0e8',
         paper: '#faf8f3',
-        // Neon colors
+        // Neon colors - Coral + Warm Gold palette
         neon: {
-          pink: '#ff2d92',
-          cyan: '#00f5ff',
-          purple: '#bf5af2',
-          rose: '#ff6b9d',
-          gold: '#ffd700',
-          blue: '#0a84ff',
+          pink: '#ff6b6b',      // Coral
+          cyan: '#ffb347',      // Warm Gold/Orange
+          purple: '#ff8c69',    // Salmon/Coral Light
+          rose: '#ffa07a',      // Light Salmon
+          gold: '#ffd700',      // Classic Gold
+          blue: '#ffb347',      // Warm Gold
         },
       },
       fontFamily: {

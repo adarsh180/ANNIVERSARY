@@ -5,21 +5,27 @@
 @tailwind utilities;
 
 /* ================================
-   CSS Variables - Dark Romantic Neon Theme
+   CSS Variables - Dark Romantic Theme
+   Coral + Warm Gold Palette
    ================================ */
 :root {
   --background: #0a0a0a;
   --foreground: #f5f0e8;
-  --rose-glow: #8b1a3d;
-  --gold-glow: #d4a853;
+  --rose-glow: #ff6b6b;
+  --gold-glow: #ffb347;
   --paper-color: #faf8f3;
 
-  /* Neon colors */
-  --neon-pink: #ff2d92;
-  --neon-cyan: #00f5ff;
-  --neon-purple: #bf5af2;
-  --neon-rose: #ff6b9d;
+  /* Neon colors - Coral + Warm Gold palette */
+  --neon-pink: #ff6b6b;
+  /* Coral */
+  --neon-cyan: #ffb347;
+  /* Warm Gold/Orange */
+  --neon-purple: #ff8c69;
+  /* Salmon/Coral Light */
+  --neon-rose: #ffa07a;
+  /* Light Salmon */
   --neon-gold: #ffd700;
+  /* Classic Gold */
 }
 
 /* ================================
@@ -27,7 +33,7 @@
    ================================ */
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(255, 45, 146, 0.5) transparent;
+  scrollbar-color: rgba(232, 168, 124, 0.5) transparent;
 }
 
 *::-webkit-scrollbar {
@@ -39,12 +45,16 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--neon-pink), var(--neon-purple));
+  background: linear-gradient(180deg, var(--neon-pink), var(--neon-rose));
   border-radius: 3px;
 }
 
 html {
   scroll-behavior: smooth;
+  /* Enable GPU acceleration for entire page */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
@@ -52,6 +62,51 @@ body {
   background: var(--background);
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
+  /* Enable hardware acceleration */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* ================================
+   Buttery Smooth Animations
+   ================================ */
+
+/* GPU-accelerated transforms for all animated elements */
+.protected-content,
+.card-neon,
+.glass-premium,
+.glass,
+[class*="motion"] {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Smooth transitions everywhere */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Ultra smooth image loading */
+img {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* ================================

@@ -35,18 +35,18 @@ export default function EnterPage() {
       {/* Floating particles with neon colors */}
       <div className="absolute inset-0 overflow-hidden">
         {[
-          { x: 100, y: 50, duration: 8, delay: 0, color: '#ff2d92' },
-          { x: 300, y: 150, duration: 12, delay: 1, color: '#00f5ff' },
-          { x: 500, y: 80, duration: 10, delay: 0.5, color: '#bf5af2' },
-          { x: 700, y: 200, duration: 14, delay: 2, color: '#ff2d92' },
+          { x: 100, y: 50, duration: 8, delay: 0, color: '#ff6b6b' },
+          { x: 300, y: 150, duration: 12, delay: 1, color: '#ffb347' },
+          { x: 500, y: 80, duration: 10, delay: 0.5, color: '#ff8c69' },
+          { x: 700, y: 200, duration: 14, delay: 2, color: '#ff6b6b' },
           { x: 200, y: 300, duration: 9, delay: 1.5, color: '#ffd700' },
-          { x: 400, y: 250, duration: 11, delay: 0.8, color: '#00f5ff' },
-          { x: 600, y: 100, duration: 13, delay: 2.5, color: '#ff6b9d' },
-          { x: 800, y: 180, duration: 8, delay: 1.2, color: '#bf5af2' },
-          { x: 150, y: 350, duration: 10, delay: 3, color: '#ff2d92' },
-          { x: 350, y: 400, duration: 12, delay: 0.3, color: '#00f5ff' },
+          { x: 400, y: 250, duration: 11, delay: 0.8, color: '#ffb347' },
+          { x: 600, y: 100, duration: 13, delay: 2.5, color: '#ffa07a' },
+          { x: 800, y: 180, duration: 8, delay: 1.2, color: '#ff8c69' },
+          { x: 150, y: 350, duration: 10, delay: 3, color: '#ff6b6b' },
+          { x: 350, y: 400, duration: 12, delay: 0.3, color: '#ffb347' },
           { x: 550, y: 320, duration: 9, delay: 1.8, color: '#ffd700' },
-          { x: 750, y: 380, duration: 11, delay: 2.2, color: '#ff2d92' },
+          { x: 750, y: 380, duration: 11, delay: 2.2, color: '#ff6b6b' },
         ].map((particle, i) => (
           <motion.div
             key={i}
@@ -87,13 +87,13 @@ export default function EnterPage() {
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
             transition={{ duration: 2, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-            style={{ filter: 'drop-shadow(0 0 5px #ff2d92)' }}
+            style={{ filter: 'drop-shadow(0 0 5px #ff6b6b)' }}
           />
           <defs>
             <linearGradient id="neonLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#ff2d92" />
-              <stop offset="50%" stopColor="#00f5ff" />
-              <stop offset="100%" stopColor="#ff2d92" />
+              <stop offset="0%" stopColor="#ff6b6b" />
+              <stop offset="50%" stopColor="#ffb347" />
+              <stop offset="100%" stopColor="#ff6b6b" />
             </linearGradient>
           </defs>
           {/* Start point */}
@@ -101,26 +101,26 @@ export default function EnterPage() {
             cx="10"
             cy="10"
             r="4"
-            fill="#ff2d92"
+            fill="#ff6b6b"
             animate={{
               scale: [1, 1.3, 1],
               opacity: [0.7, 1, 0.7]
             }}
             transition={{ duration: 2, repeat: Infinity }}
-            style={{ filter: 'drop-shadow(0 0 8px #ff2d92)' }}
+            style={{ filter: 'drop-shadow(0 0 8px #ff6b6b)' }}
           />
           {/* End point */}
           <motion.circle
             cx="290"
             cy="10"
             r="4"
-            fill="#00f5ff"
+            fill="#ffb347"
             animate={{
               scale: [1, 1.3, 1],
               opacity: [0.7, 1, 0.7]
             }}
             transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-            style={{ filter: 'drop-shadow(0 0 8px #00f5ff)' }}
+            style={{ filter: 'drop-shadow(0 0 8px #ffb347)' }}
           />
         </svg>
       </motion.div>
@@ -137,8 +137,8 @@ export default function EnterPage() {
             className="w-24 h-24 md:w-32 md:h-32"
             fill="currentColor"
             style={{
-              color: '#ff2d92',
-              filter: 'drop-shadow(0 0 30px #ff2d92) drop-shadow(0 0 60px #ff2d92)'
+              color: '#ff6b6b',
+              filter: 'drop-shadow(0 0 30px #ff6b6b) drop-shadow(0 0 60px #ff6b6b)'
             }}
           />
           {/* Neon ring effect */}
