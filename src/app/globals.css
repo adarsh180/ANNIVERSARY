@@ -1,21 +1,639 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* ================================
+   CSS Variables - Dark Romantic Neon Theme
+   ================================ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #f5f0e8;
+  --rose-glow: #8b1a3d;
+  --gold-glow: #d4a853;
+  --paper-color: #faf8f3;
+
+  /* Neon colors */
+  --neon-pink: #ff2d92;
+  --neon-cyan: #00f5ff;
+  --neon-purple: #bf5af2;
+  --neon-rose: #ff6b9d;
+  --neon-gold: #ffd700;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ================================
+   Base Styles
+   ================================ */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 45, 146, 0.5) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--neon-pink), var(--neon-purple));
+  border-radius: 3px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ================================
+   Premium Glassmorphism Utilities
+   ================================ */
+@layer utilities {
+  .glass {
+    background: rgba(26, 26, 26, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-premium {
+    background: rgba(20, 20, 20, 0.7);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .glass-dark {
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .glass-rose {
+    background: rgba(139, 26, 61, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 45, 146, 0.2);
+  }
+
+  .glass-neon {
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 45, 146, 0.3);
+    box-shadow:
+      0 0 20px rgba(255, 45, 146, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* ================================
+   Neon Glow Effects
+   ================================ */
+.neon-text-pink {
+  color: var(--neon-pink);
+  text-shadow:
+    0 0 5px var(--neon-pink),
+    0 0 10px var(--neon-pink),
+    0 0 20px var(--neon-pink),
+    0 0 40px var(--neon-pink);
+}
+
+.neon-text-cyan {
+  color: var(--neon-cyan);
+  text-shadow:
+    0 0 5px var(--neon-cyan),
+    0 0 10px var(--neon-cyan),
+    0 0 20px var(--neon-cyan),
+    0 0 40px var(--neon-cyan);
+}
+
+.neon-text-purple {
+  color: var(--neon-purple);
+  text-shadow:
+    0 0 5px var(--neon-purple),
+    0 0 10px var(--neon-purple),
+    0 0 20px var(--neon-purple),
+    0 0 40px var(--neon-purple);
+}
+
+.neon-text-gold {
+  color: var(--neon-gold);
+  text-shadow:
+    0 0 5px var(--neon-gold),
+    0 0 10px var(--neon-gold),
+    0 0 20px var(--neon-gold),
+    0 0 40px var(--neon-gold);
+}
+
+/* Neon Border Effects */
+.neon-border-pink {
+  border: 2px solid var(--neon-pink);
+  box-shadow:
+    0 0 5px var(--neon-pink),
+    0 0 10px var(--neon-pink),
+    inset 0 0 5px rgba(255, 45, 146, 0.1);
+}
+
+.neon-border-cyan {
+  border: 2px solid var(--neon-cyan);
+  box-shadow:
+    0 0 5px var(--neon-cyan),
+    0 0 10px var(--neon-cyan),
+    inset 0 0 5px rgba(0, 245, 255, 0.1);
+}
+
+.neon-border-pulse {
+  animation: neon-pulse 2s ease-in-out infinite;
+}
+
+@keyframes neon-pulse {
+
+  0%,
+  100% {
+    box-shadow:
+      0 0 5px var(--neon-pink),
+      0 0 10px var(--neon-pink),
+      0 0 20px var(--neon-pink);
+  }
+
+  50% {
+    box-shadow:
+      0 0 10px var(--neon-pink),
+      0 0 20px var(--neon-pink),
+      0 0 40px var(--neon-pink),
+      0 0 60px var(--neon-pink);
+  }
+}
+
+/* Neon Flicker Effect */
+.neon-flicker {
+  animation: neon-flicker 3s infinite;
+}
+
+@keyframes neon-flicker {
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    opacity: 1;
+    text-shadow:
+      0 0 5px var(--neon-pink),
+      0 0 10px var(--neon-pink),
+      0 0 20px var(--neon-pink);
+  }
+
+  20%,
+  24%,
+  55% {
+    opacity: 0.8;
+    text-shadow: none;
+  }
+}
+
+/* ================================
+   Ambient Glow Effects
+   ================================ */
+.glow-rose {
+  box-shadow: 0 0 60px rgba(139, 26, 61, 0.3),
+    0 0 120px rgba(139, 26, 61, 0.15);
+}
+
+.glow-gold {
+  box-shadow: 0 0 60px rgba(212, 168, 83, 0.25),
+    0 0 120px rgba(212, 168, 83, 0.1);
+}
+
+.glow-neon-pink {
+  box-shadow:
+    0 0 20px rgba(255, 45, 146, 0.4),
+    0 0 40px rgba(255, 45, 146, 0.2),
+    0 0 60px rgba(255, 45, 146, 0.1);
+}
+
+.glow-neon-cyan {
+  box-shadow:
+    0 0 20px rgba(0, 245, 255, 0.4),
+    0 0 40px rgba(0, 245, 255, 0.2),
+    0 0 60px rgba(0, 245, 255, 0.1);
+}
+
+.text-glow-rose {
+  text-shadow: 0 0 30px rgba(139, 26, 61, 0.5),
+    0 0 60px rgba(139, 26, 61, 0.3);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 30px rgba(212, 168, 83, 0.5),
+    0 0 60px rgba(212, 168, 83, 0.3);
+}
+
+/* ================================
+   Fire Burst Animation
+   ================================ */
+@keyframes fire-burst {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.5) rotate(180deg);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(2) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.fire-burst {
+  animation: fire-burst 1s ease-out forwards;
+}
+
+@keyframes fire-particle {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-100px) scale(0);
+    opacity: 0;
+  }
+}
+
+.fire-particle {
+  animation: fire-particle 1.5s ease-out infinite;
+}
+
+/* ================================
+   Paper Texture for Letter Page
+   ================================ */
+.paper-texture {
+  background-color: var(--paper-color);
+  background-image:
+    linear-gradient(90deg, transparent 79px, rgba(139, 26, 61, 0.08) 79px, rgba(139, 26, 61, 0.08) 81px, transparent 81px),
+    linear-gradient(rgba(139, 26, 61, 0.03) 1px, transparent 1px);
+  background-size: 100% 28px;
+  position: relative;
+}
+
+.paper-texture::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.02;
+  pointer-events: none;
+}
+
+/* ================================
+   Heartbeat Animation for Enter Page
+   ================================ */
+@keyframes heartbeat {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  14% {
+    transform: scale(1.15);
+  }
+
+  28% {
+    transform: scale(1);
+  }
+
+  42% {
+    transform: scale(1.15);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+}
+
+.heartbeat {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+/* ================================
+   Audio Waveform Animation
+   ================================ */
+.waveform-bar {
+  animation: wave 1.2s linear infinite;
+}
+
+.waveform-bar:nth-child(2) {
+  animation-delay: -1.0s;
+}
+
+.waveform-bar:nth-child(3) {
+  animation-delay: -0.8s;
+}
+
+.waveform-bar:nth-child(4) {
+  animation-delay: -0.6s;
+}
+
+.waveform-bar:nth-child(5) {
+  animation-delay: -0.4s;
+}
+
+/* ================================
+   Polaroid Styles
+   ================================ */
+.polaroid {
+  background: white;
+  padding: 12px 12px 40px 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4),
+    0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.polaroid:hover {
+  transform: rotate(0deg) scale(1.05) !important;
+  z-index: 10;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+    0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ================================
+   Timeline Styles
+   ================================ */
+.timeline-line {
+  background: linear-gradient(180deg,
+      transparent 0%,
+      rgba(255, 45, 146, 0.5) 10%,
+      rgba(255, 45, 146, 0.5) 90%,
+      transparent 100%);
+  background-image: repeating-linear-gradient(0deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 45, 146, 0.3) 10px,
+      rgba(255, 45, 146, 0.3) 20px);
+}
+
+.timeline-dot {
+  box-shadow:
+    0 0 10px var(--neon-pink),
+    0 0 20px var(--neon-pink),
+    0 0 30px rgba(255, 45, 146, 0.5);
+}
+
+/* ================================
+   Navigation Styles
+   ================================ */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--neon-pink), var(--neon-cyan));
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px var(--neon-pink);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 80%;
+}
+
+/* ================================
+   Page Transitions Background
+   ================================ */
+.page-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(255, 45, 146, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(0, 245, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(191, 90, 242, 0.03) 0%, transparent 70%),
+    linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+  z-index: -1;
+}
+
+/* ================================
+   Apple-Style Card
+   ================================ */
+.card-apple {
+  background: rgba(30, 30, 30, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.3),
+    0 1px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card-apple:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.4),
+    0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ================================
+   Neon Card Style
+   ================================ */
+.card-neon {
+  background: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 24px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-neon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 24px;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple), var(--neon-cyan));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.card-neon:hover::before {
+  opacity: 1;
+}
+
+.card-neon::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 45, 146, 0.1) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.card-neon:hover::after {
+  opacity: 1;
+}
+
+/* ================================
+   Mobile Responsiveness
+   ================================ */
+@media (max-width: 768px) {
+  .paper-texture {
+    padding: 1.5rem !important;
+  }
+
+  .polaroid {
+    padding: 8px 8px 30px 8px;
+  }
+}
+
+/* ================================
+   Image Protection
+   ================================
+   Prevents easy downloading/saving of photos.
+*/
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  pointer-events: auto;
+  -webkit-touch-callout: none;
+}
+
+/* Prevent long press save on mobile */
+img {
+  -webkit-touch-callout: none;
+}
+
+/* Additional protection layer */
+.protected-image {
+  position: relative;
+}
+
+.protected-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  pointer-events: none;
+}
+
+/* ================================
+   Aurora Effect
+   ================================ */
+@keyframes aurora {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.aurora-bg {
+  background: linear-gradient(-45deg,
+      rgba(255, 45, 146, 0.1),
+      rgba(191, 90, 242, 0.1),
+      rgba(0, 245, 255, 0.1),
+      rgba(255, 107, 157, 0.1));
+  background-size: 400% 400%;
+  animation: aurora 15s ease infinite;
+}
+
+/* ================================
+   Countdown Digit Style
+   ================================ */
+.countdown-digit {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* ================================
+   Screen Capture Protection
+   ================================ */
+.protected-content {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Blur on print/screenshot attempt */
+@media print {
+
+  .protected-image,
+  .gallery-grid {
+    display: none !important;
+  }
+
+  body::before {
+    content: 'Protected Content - Cannot Print';
+    display: block;
+    text-align: center;
+    padding: 50px;
+    font-size: 24px;
+  }
 }
